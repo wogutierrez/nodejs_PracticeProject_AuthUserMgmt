@@ -8,7 +8,6 @@ let friends = {
     "peterjones@gamil.com":{"firstName": "Peter","lastName": "Jones","DOB":"21-03-1989"}
 };
 
-
 // GET request: Retrieve all friends
 router.get("/",(req,res)=>{
 
@@ -19,15 +18,18 @@ router.get("/",(req,res)=>{
 
 // GET by specific ID request: Retrieve a single friend with email ID
 router.get("/:email",(req,res)=>{
-  // Update the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  // Update the code
+  const email = req.params.email; 
+  res.send(friends[email]); 
 });
 
 
 // POST request: Add a new friend
 router.post("/",(req,res)=>{
   // Update the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  
+  
+  // res.send("Yet to be implemented")//This line is to be replaced with actual return value
 });
 
 
